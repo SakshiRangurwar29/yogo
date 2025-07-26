@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Obsidian Journal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+ 
+
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container nav-content">
+    <h1 class="logo">Obsidian</h1>
+    <button class="nav-toggle" id="navToggle">&#9776;</button>
+    <nav class="nav-links" id="navMenu">
+      <a href="#featured">Featured</a>
+      <a href="#journal">Journal</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+
+<section class="hero">
+  <div class="container">
+    <h2>Welcome to Obsidian Journal</h2>
+    <p>Where late-night thoughts and creative sparks come to life.</p>
+  </div>
+</section>
+
+<main id="shuffle-sections">
+  <section id="featured" class="section">
+    <div class="container">
+      <h2>Featured Post</h2>
+      <div class="featured">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXlvP_bTmSuCwWuJ9i-_x3AcUYIQW-Wv0zmA&s" alt="">
+        <div>
+          <h3>Writing in Flow</h3>
+          <p>Letting go of structure and writing from the heart. A journey into creative freedom.</p>
+
+          <!-- Inline Date and Author -->
+      <div class="meta">
+        <span>Date: 25/06/2025</span>
+        <span>by John</span>
+      </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="journal" class="section">
+    <div class="container">
+      <h2>Latest Journal</h2>
+      <div class="grid" id="journalGrid">
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTO9zw_1aTbwuAyhTRsnEv3mqXJusU1PE7wfH5WAFnaewmN3tv-4DM02hQxlRLFFR3gTqw&usqp=CAU" alt="">
+          <h3>Midnight Sparks</h3>
+          <p>Ideas bloom when the world sleeps.</p>
+        </div>
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRh_7KAeYbRCq5SNzi41ywadplmpD144CPj9w&s" alt="">
+          <h3>Daily Journaling</h3>
+          <p>Using words to stay grounded and filter thoughts.</p>
+        </div>
+        <div class="card">
+          <img src="https://designingsound.org/wp-content/uploads/2014/06/city-lights-1931-charlie-chaplin-silent-movie-review-image-23.jpg" alt="">
+          <h3>Designing in Silence</h3>
+          <p>When silence helps the pixels align perfectly.</p>
+        </div>
+        <div class="card">
+  <video controls muted preload="metadata" style="max-width: 100%; border-radius: 8px;">
+    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+  </video>
+  <h3>nature</h3>
+  <p>A glimpse into the visual storytelling.</p>
+</div>
+
+      </div>
+    </div>
+  </section>
+  <section id="create-post" class="section fade-in-on-scroll">
+  <div class="container">
+    <h2>Add New Blog Post</h2>
+    <form id="postForm">
+      <input type="text" id="postTitle" placeholder="Post Title" required>
+      <textarea id="postContent" placeholder="Write your thoughts..." rows="4" required></textarea>
+      <input type="text" id="postAuthor" placeholder="Author name" required />
+      <input type="file" id="postMedia" accept="image/*,video/*">
+      <button type="submit">Add Post</button>
+    </form>
+
+    <div id="postPreviewArea"></div>
+  </div>
+</section>
+
+
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>I’m a writer, designer, and quiet observer of life. I use this space to capture and share my thoughts, experiments, and creative expressions.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 Obsidian Journal — Created with calm, shared with clarity.</p>
+</footer>
+
+
+<div id="cardModal" class="modal">
+  <div class="modal-content">
+    <span class="close-button" id="modalClose">&times;</span>
+    <img id="modalImage" src="" alt="" style="display:none;" />
+    <video id="modalVideo" controls style="display:none; max-width:100%; border-radius: 5px;">
+      <source src="" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <h3 id="modalTitle"></h3>
+    <p id="modalDescription"></p>
+  </div>
+</div>
+
+
+</body>
+</html>
